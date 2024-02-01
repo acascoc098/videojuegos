@@ -1,0 +1,143 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "title": "Lucha"
+        },
+        {
+            "id": 2,
+            "title": "Arcade"
+        },
+        {
+            "id": 3,
+            "title": "Plataformas"
+        },
+        {
+            "id": 4,
+            "title": "Shooter"
+        },
+        {
+            "id": 5,
+            "title": "Estrategia"
+        },
+        {
+            "id": 6,
+            "title": "Simulacion"
+        },
+        {
+            "id": 7,
+            "title": "Deporte"
+        },
+        {
+            "id": 8,
+            "title": "Aventura"
+        },
+        {
+            "id": 9,
+            "title": "Rol"
+        },
+        {
+            "id": 10,
+            "title": "Educación"
+        },
+        {
+            "id": 11,
+            "title": "Puzzle"
+        }
+    ],
+    "plataformas": [
+        {
+            "id": 1,
+            "title": "PC"
+        },
+        {
+            "id": 2,
+            "title": "PS5"
+        },
+        {
+            "id": 3,
+            "title": "Xbox One"
+        },
+        {
+            "id": 4,
+            "title": "Switch"
+        },
+        {
+            "id": 5,
+            "title": "Android"
+        },
+        {
+            "id": 6,
+            "title": "iOS"
+        },
+        {
+            "id": 7,
+            "title": "Otras"
+        }
+    ],
+    
+    "juegos": [
+        {
+            "id": 1,
+            "nombre": "The Legend of Zelda: Breath of the Wild",
+            "descripcion": "En The Legend of Zelda: Breath of the Wild, los jugadores asumen el papel de Link, quien se despierta de un sueño profundo en el reino de Hyrule. Con una vasta extensión de tierra para explorar, incluyendo montañas, bosques y llanuras, los jugadores pueden aventurarse en cualquier dirección y descubrir secretos en cada rincón. La mecánica de juego innovadora permite a los jugadores usar objetos del entorno de maneras creativas para resolver acertijos y derrotar enemigos, brindando una experiencia de juego inmersiva y emocionante.",
+            "fecha_lanza": "3 de marzo de 2017",
+            "compania": "Nintendo",
+            "plataformas": [4,7],
+            "categorias": [8],
+            "precio": 59.99,
+            "imagen": "https://static.posters.cz/image/750/pinturas-sobre-lienzo-the-legend-of-zelda-breath-of-the-wild-sunset-i111061.jpg",
+            "video": "https://www.youtube.com/watch?v=ofH5ptn5w-A"
+        },
+        {
+            "id": 2,
+            "nombre": "Cyberpunk 2077",
+            "descripcion": "Cyberpunk 2077 es un juego de rol de acción ambientado en Night City, una metrópolis futurista obsesionada con el poder, la moda y la modificación corporal. Los jugadores asumen el papel de V, un mercenario que busca un implante único que concede la inmortalidad. En su búsqueda, los jugadores exploran un mundo abierto vibrante y lleno de vida, interactúan con una variedad de personajes memorables y toman decisiones que afectan el curso de la historia. Con una narrativa compleja, jugabilidad emocionante y una atmósfera inmersiva, Cyberpunk 2077 ofrece una experiencia de juego única y emocionante.",
+            "fecha_lanza": "10 de diciembre de 2020",
+            "compania": "CD Projekt",
+            "plataformas": [3,4],
+            "categorias": [9,4],
+            "precio": 49.99,
+            "imagen": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd",
+            "video": "https://www.youtube.com/watch?v=VhM3NRu23Sk"
+        },
+        {
+            "id": 3,
+            "nombre": "Super Mario Odyssey",
+            "descripcion": "Super Mario Odyssey lleva a los jugadores en una emocionante aventura a través de varios reinos en su intento por rescatar a la Princesa Peach de Bowser. Con la ayuda de Cappy, un sombrero con la habilidad de poseer objetos y enemigos, Mario puede explorar entornos expansivos, resolver acertijos ingeniosos y enfrentarse a desafiantes jefes. Con su característico estilo de juego de plataformas y su encantador diseño de nivel, Super Mario Odyssey ofrece una experiencia clásica de Mario con un giro fresco y emocionante.",
+            "fecha_lanza": "27 de octubre de 2017",
+            "compania": "Nintendo",
+            "plataformas": [4],
+            "categorias": [3,8],
+            "precio": 49.99,
+            "imagen": "https://m.media-amazon.com/images/I/71XZsDkAuNL.__AC_SX300_SY300_QL70_ML2_.jpg",
+            "video": "https://www.youtube.com/watch?v=EF5YynyWvQo"
+        },
+        {
+            "id": 4,
+            "nombre": "The Witcher 3: Wild Hunt",
+            "descripcion": "The Witcher 3: Wild Hunt es un juego de rol de acción que sumerge a los jugadores en un mundo oscuro y peligroso lleno de monstruos y magia. Interpretando a Geralt de Rivia, un cazador de monstruos conocido como un Witcher, los jugadores se embarcan en una búsqueda épica para encontrar a la hija adoptiva de Geralt y descubrir el secreto detrás de sus misteriosos poderes. Con una narrativa rica y ramificada, decisiones morales impactantes y una inmensa cantidad de contenido, The Witcher 3: Wild Hunt ofrece una experiencia de juego inmersiva que cautiva a los jugadores desde el principio hasta el final.",
+            "fecha_lanza": "19 de mayo de 2015",
+            "compania": "CD Projekt",
+            "plataformas": [3,4],
+            "categorias": [9,4],
+            "precio": 39.99,
+            "imagen": "https://image.api.playstation.com/vulcan/ap/rnd/202211/0807/IqM9JK6MTlSfKFfJbpO8Mclr.png?w=1024&thumb=false",
+            "video": "https://www.youtube.com/watch?v=spWN_VZpvTE"
+        },
+        {
+            "id": 5,
+            "nombre": "Red Dead Redemption 2",
+            "descripcion": "Red Dead Redemption 2 es un épico relato de honor, lealtad y la lucha por la supervivencia en el salvaje oeste americano. Ambientado en 1899, el juego sigue la historia de Arthur Morgan, un forajido miembro de la banda de Dutch van der Linde. A medida que la banda lucha por sobrevivir en un mundo que está cambiando rápidamente, los jugadores exploran vastas llanuras, montañas nevadas y pantanos peligrosos mientras enfrentan decisiones morales que afectan el destino de la banda y su propio camino. Con una narrativa profunda y emocionante, un mundo abierto expansivo y una jugabilidad envolvente, Red Dead Redemption 2 ofrece una experiencia de juego incomparable que deja una impresión duradera en los jugadores.",
+            "fecha_lanza": "26 de octubre de 2018",
+            "compania": "Rockstar Games",
+            "plataformas": [3,4],
+            "categorias": [4,8],
+            "precio": 59.99,
+            "imagen": "https://licendi.com/media/catalog/product/cache/257f0e39ed8c8969561540a6eaa4f531/r/d/rdr28_2-1_1_.jpg",
+            "video": "https://www.youtube.com/watch?v=IjZwoOwxqtM"
+        }
+    ]
+    
+    
+}
