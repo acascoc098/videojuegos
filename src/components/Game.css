@@ -1,0 +1,32 @@
+/* styles.css */
+.GameContainer {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: lightsteelblue;
+}
+
+.GameTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.GamePlatforms {
+    font-style: italic;
+    color: #666;
+}
+
+.GameImage {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.GamePrice {
+    font-weight: bold;
+}
+
+.GameDescription {
+    margin-top: 10px;
+    color: #333;
+}

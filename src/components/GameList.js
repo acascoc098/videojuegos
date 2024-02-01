@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { getGames } from "../api/GamesApi"
 import Game from "./Game";
 
-function GameList ({games, setGames}){
+function GameList ({games, setGames, onDeleteGame}){
     const downloadGames = async () => {
         const games = await getGames();
         setGames(games);
@@ -12,14 +12,18 @@ function GameList ({games, setGames}){
         downloadGames();
     },[]);
 
-    return <div className="Lista">
-        <div className="resultados">
+    return (
+        <div className="Lista">
             {
-                games.length === 0 ? <p>No se han encontrado juegos :&lpar;</p>
-                : games.map(game => <Game game={game} key={game.id}/>)
+                games.length === 0 ? 
+                    <p>No se han encontrado juegos :&lpar;</p>
+                : 
+                    games.map(game => 
+                        <Game game={game} key={game.id} onDeleteGame={onDeleteGame}/>
+                    )
             }
         </div>
-    </div>
+    );
 }
 
 export default GameList;
