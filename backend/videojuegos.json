@@ -145,18 +145,6 @@
       "precio": 59.99,
       "imagen": "https://licendi.com/media/catalog/product/cache/257f0e39ed8c8969561540a6eaa4f531/r/d/rdr28_2-1_1_.jpg",
       "video": "https://www.youtube.com/watch?v=IjZwoOwxqtM"
-    },
-    {
-        "id": 2,
-        "nombre": "Cyberpunk 2077",
-        "descripcion": "Cyberpunk 2077 es un juego de rol de acción ambientado en Night City, una metrópolis futurista obsesionada con el poder, la moda y la modificación corporal. Los jugadores asumen el papel de V, un mercenario que busca un implante único que concede la inmortalidad. En su búsqueda, los jugadores exploran un mundo abierto vibrante y lleno de vida, interactúan con una variedad de personajes memorables y toman decisiones que afectan el curso de la historia. Con una narrativa compleja, jugabilidad emocionante y una atmósfera inmersiva, Cyberpunk 2077 ofrece una experiencia de juego única y emocionante.",
-        "fecha_lanza": "10 de diciembre de 2020", 
-        "compania": "CD Projekt",
-        "plataformas": [3,4],
-        "categorias": [9,4],
-        "precio": 49.99,
-        "imagen": "https://cdn1.epicgames.com/offer/77f2b98e2cef40c8a7437518bf420e47/EGS_Cyberpunk2077UltimateEdition_CDPROJEKTRED_Editions_S2_1200x1600-81442c61fd09b45ecd03add7c0c3afdd",
-        "video": "https://www.youtube.com/watch?v=VhM3NRu23Sk"
-    }  
+    }
   ]
 }

@@ -6,7 +6,7 @@ const Game = ({game, onDeleteGame}) => {
     const plataformas = game.plataformas.join(' - ');
     const descripcion100 = game.descripcion.substring(0,100);
 
-    const delGame = async ({onDeleteGame}) => {
+    const delGame = async () => {
         const response = await deleteGame(game);
         if (!response.error) {
             onDeleteGame(game);
