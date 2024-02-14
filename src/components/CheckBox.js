@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-function CheckBox{
+const CheckBox = () =>{
     const [selec, setSelect] = useState([]);
+    return (<></>);
 }
 
 export default CheckBox;
