@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
-import { useState } from 'react';
 import GameList from './components/GameList';
+import { GameContext } from './context/GameProvider';
 
 function App() {
-  const [games,setGames] = useState([]);
+  //const [games,setGames] = useState([]);
+
+  const {games,setGames} = useContext(GameContext)
 
   const onDeleteGame = (delGame) => {
     const newGames = games.filter((game) => delGame !== game);
@@ -13,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <GameList games={games} setGames={setGames} onDeleteGame={onDeleteGame}/>  
+      <GameList onDeleteGame={onDeleteGame}/>  
     </div>
   );
 }
