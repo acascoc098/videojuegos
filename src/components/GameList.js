@@ -3,6 +3,7 @@ import Game from "./Game";
 import { GameContext } from "../context/GameProvider";
 import CategoryMenu from "./CategoryMenu";
 import PlatformMenu from "./PlatformMenu";
+import GameModal from "./GameModal";
 
 function GameList ({onDeleteGame}){
 
@@ -58,14 +59,15 @@ function GameList ({onDeleteGame}){
         <div className="Lista">
             <CategoryMenu onCategoryChange={handleCategoryChange} />
             <PlatformMenu onPlatformChange={handlePlatformChange} />
-            { 
-                games && games.length > 0 ?
-                    games.map(game => 
-                        <Game game={game} key={game.id} onDeleteGame={onDeleteGame}/>
-                    )
-                : 
-                    <p>No se han encontrado juegos</p>
-            }
+            {games && games.length > 0 ? (
+                games.map(game => (
+                <div key={game.id}>
+                    <Game game={game} onDeleteGame={onDeleteGame} />
+                </div>
+                ))
+            ) : (
+                <p>No se han encontrado juegos</p>
+            )}
         </div>
     );
     

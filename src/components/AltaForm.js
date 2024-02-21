@@ -3,7 +3,7 @@ import { postGame } from "../api/GamesApi";
 
 const AltaForm = ({plataformas, categorias, onSaveGame}) => {
 
-    const [inputValue, setInputValue] = useState({
+    /*const [inputValue, setInputValue] = useState({
         nombre: "",
         descripcion: "",
         fecha_lanza: "",
@@ -136,7 +136,7 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
 
         </div>
         </form>
-    )
+    )*/
 
 }
 

@@ -32,6 +32,7 @@ const PlatformMenu = ({ onPlatformChange }) => {
               value={platform.id}
               onChange={(e) => handlePlatformChange(e.target.value, e.target.checked)}
             />
+            {platform.id} -
             {platform.title}
           </label>
         ))}

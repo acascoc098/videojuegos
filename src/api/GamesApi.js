@@ -1,3 +1,17 @@
+export const getGame = async (gameId) => {
+    try {
+        const response = await fetch("http://localhost:3001/juegos/" + gameId);
+        if (response.status === 200) {
+            return {error: false, data: await response.json()};
+        } else {
+            return {error: true, data: "No existe el id del juego"};
+        }
+    } catch(e) {
+        return {error: true, data: "No se ha podido descargar el juego"}
+    }
+}
+
+
 export const deleteGame = async (game) => {
     const response = await fetch("http://localhost:3001/juegos/" + game.id, {
         method: "DELETE"

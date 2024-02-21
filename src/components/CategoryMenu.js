@@ -31,6 +31,7 @@ const CategoryMenu = ({ onCategoryChange }) => {
             value={category.id}
             onChange={(e) => handleCategoryChange(e.target.value, e.target.checked)}
           />
+          {category.id} -
           {category.title}
         </label>
       ))}

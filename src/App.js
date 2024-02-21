@@ -1,6 +1,8 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './App.css';
 import GameList from './components/GameList';
+import { NavLink, Route, Routes } from 'react-router-dom';
+import GameDetalle from './components/GameDetalle';
 import { GameContext } from './context/GameProvider';
 
 function App() {
@@ -15,7 +17,15 @@ function App() {
 
   return (
     <div className="App">
-      <GameList onDeleteGame={onDeleteGame}/>  
+      <nav>
+        <NavLink to="/home">LISTADO</NavLink>
+        <NavLink to="/new">AÑADIR</NavLink>
+        <NavLink></NavLink>
+      </nav>
+      <Routes>
+        <Route path='/game/:gameid' element={<GameDetalle/>}/>
+        <Route path='/home' element={<GameList onDeleteGame={onDeleteGame}/>}/>
+      </Routes>  
     </div>
   );
 }
