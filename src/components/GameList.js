@@ -1,23 +1,21 @@
 import { useContext, useEffect, useState } from "react";
 import Game from "./Game";
 import { GameContext } from "../context/GameProvider";
+import CategoryMenu from "./CategoryMenu";
+import PlatformMenu from "./PlatformMenu";
 
 function GameList ({onDeleteGame}){
 
-    const [loading, setLoadirng] = useState(true)
     const {getGames,games,setGames} = useContext(GameContext)
     const [serverError, setServerError] = useState({error: false, message: ""});
 
     const downloadGames = async () => {
-        setLoadirng(true);
         try {
             const gamesD = await getGames();
             setGames(gamesD);
             setServerError({ error: false, message: "" });
-            setLoadirng(false);
         } catch (error) {
             setGames([]);
-            setLoadirng(false);
             setServerError({ error: true, message: error.message });
         }
     }
@@ -31,7 +29,7 @@ function GameList ({onDeleteGame}){
             downloadGames();
         }
     }, [games]);
-    
+
 
     /*return (
         <div className="Lista">
@@ -45,10 +43,23 @@ function GameList ({onDeleteGame}){
             }
         </div>
     );*/
+
+    const handleCategoryChange = (categoriaId, checked) => {
+        
+    };
+    
+    // Función para filtrar juegos por plataforma
+    const handlePlatformChange = (plataformaId, checked) => {
+        
+    };
+      
+
     return (
         <div className="Lista">
+            <CategoryMenu onCategoryChange={handleCategoryChange} />
+            <PlatformMenu onPlatformChange={handlePlatformChange} />
             { 
-                games && games.length > 0 ? 
+                games && games.length > 0 ?
                     games.map(game => 
                         <Game game={game} key={game.id} onDeleteGame={onDeleteGame}/>
                     )
