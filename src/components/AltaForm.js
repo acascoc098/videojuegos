@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useRef,useState } from "react";
 import { postGame } from "../api/GamesApi";
+import "./AltaForm.css;"
 
 const AltaForm = ({plataformas, categorias, onSaveGame}) => {
 
-    /*const [inputValue, setInputValue] = useState({
+    const [inputValue, setInputValue] = useState({
         nombre: "",
         descripcion: "",
         fecha_lanza: "",
@@ -49,7 +50,7 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
             const response = await postGame(inputValue);
             if (!response.error) {
                 onSaveGame(response.data);
-                resetForm;
+                resetForm();
             } else {
                 setServerError({error: true, message: "No se ha podido guaradar el libro"})
             }
@@ -63,6 +64,64 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
             })
         }
     }
+
+    const handleChange = (event) => {
+        let {name, value} = event.target;
+        console.log(name, value);
+        switch (name) {
+            case "nombre":
+                if (value.length === 0) {
+                    setErrors({
+                        ...errors,
+                        title: {error: true, message: "El título del libro es obligatorio."}
+                    })
+                } else {
+                    setErrors({
+                        ...errors,
+                        title: {error: false, message: ""}
+                    })
+                }
+                break;
+            case "video":
+                if (value.length > 0 && !isNaN(value)) {
+                    setErrors({
+                        ...errors,
+                        author: {error: true, message: "El video es obligatorio"}
+                    })
+                } else {
+                    setErrors({
+                        ...errors,
+                        author: {error: false, message: ""}
+                    })
+                }
+                break;
+            case "fecha_lanza":
+                if (value.length === 0) {
+                    setErrors({
+                        ...errors,
+                        description: {error: true, message: "El la fecha de lanzamiento es obligatorio."}
+                    })
+                } else {
+                    setErrors({
+                        ...errors,
+                        description: {error: false, message: ""}
+                    })
+                }
+                break;
+            case "category":
+                value = parseInt(value);
+                break;
+            default:
+                break;
+        }
+
+        setInputValue({
+            ...inputValue,
+            [name]: value
+        });
+        setServerError({error: false, message: ""});
+    }
+
 
     return (
         <form className="form" onSubmit={onSubmit}>
@@ -136,7 +195,7 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
 
         </div>
         </form>
-    )*/
+    )
 
 }
 

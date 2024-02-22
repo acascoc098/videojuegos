@@ -4,6 +4,7 @@ import GameList from './components/GameList';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import GameDetalle from './components/GameDetalle';
 import { GameContext } from './context/GameProvider';
+import AltaForm from './components/AltaForm';
 
 function App() {
   //const [games,setGames] = useState([]);
@@ -17,7 +18,8 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
+      {
+      /*<nav>
         <NavLink to="/home">LISTADO</NavLink>
         <NavLink to="/new">AÑADIR</NavLink>
         <NavLink></NavLink>
@@ -25,7 +27,9 @@ function App() {
       <Routes>
         <Route path='/game/:gameid' element={<GameDetalle/>}/>
         <Route path='/home' element={<GameList onDeleteGame={onDeleteGame}/>}/>
-      </Routes>  
+      </Routes>*/
+      }
+      <AltaForm/>
     </div>
   );
 }
