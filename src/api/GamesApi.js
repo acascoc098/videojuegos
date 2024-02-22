@@ -42,3 +42,21 @@ export const postGame = async (game) => {
     }
     
 }
+
+export const getCategorias = async () => {
+    try {
+        const response = await fetch("http://localhost:3001/categorias");
+        return {error: false, data: await response.json()};
+    } catch(e) {
+        return {error: true, data: "No se ha podido cargar las categorias"}
+    }
+}
+
+export const getPlataformas = async () => {
+    try {
+        const response = await fetch("http://localhost:3000/plataformas");
+        return {error: false, data: await response.json()};
+    } catch(e) {
+        return {error: true, data: "No se ha podido cargar las plataformas"}
+    }
+}

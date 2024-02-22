@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './CategoryMenu.css'
 
 const CategoryMenu = ({ onCategoryChange }) => {
   const [categories, setCategories] = useState([]);
@@ -22,7 +23,7 @@ const CategoryMenu = ({ onCategoryChange }) => {
   };
 
   return (
-    <div>
+    <div className='category-menu'>
       <h3>Categorías</h3>
       {categories.map(category => (
         <label key={category.id}>

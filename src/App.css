@@ -28,6 +28,24 @@
   color: #61dafb;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: #333; /* Color del texto */
+  padding: 10px 15px; /* Espaciado interior */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0; /* Cambio de color de fondo al pasar el mouse */
+}
+
+/* Estilos opcionales */
+.nav-link.active {
+  background-color: #007bff; /* Color de fondo cuando el enlace está activo */
+  color: #fff; /* Color del texto cuando el enlace está activo */
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

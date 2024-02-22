@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './PlatformMenu.css'
 
 const PlatformMenu = ({ onPlatformChange }) => {
     const [platforms, setPlatforms] = useState([]);
@@ -23,7 +24,7 @@ const PlatformMenu = ({ onPlatformChange }) => {
       };
   
     return (
-      <div>
+      <div className='platform-menu'>
         <h3>Plataformas</h3>
         {platforms.map(platform => (
           <label key={platform.id}>

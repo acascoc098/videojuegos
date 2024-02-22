@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import './Game.css';
+import React from "react";
 
-const GameModal = ({ game }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const GameModal = ({ game, isOpen, onClose}) => {
+  
+  if (!isOpen) {
+    console.log("modal cerrado")
+    return null;
+  }
 
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
+  console.log(isOpen);
   return (
     <div className='modal'>
-      <button onClick={openModal}>i</button>
-      {isOpen && (
-        <div className="modal">
           <div className="modal-content">
-            <button className="close" onClick={closeModal}>&times;</button>
+            <button className="close" onClick={onClose}>&times;</button>
             <h2>{game.nombre}</h2>
             <p>Descripción: {game.descripcion}</p>
             <p>Fecha de Lanzamiento: {game.fecha_lanza}</p>
@@ -23,8 +23,6 @@ const GameModal = ({ game }) => {
             <img src={game.imagen} alt={game.nombre} />
             <a href={game.video} target="_blank" rel="noopener noreferrer">Ver Video</a>
           </div>
-        </div>
-      )}
     </div>
   );
 };

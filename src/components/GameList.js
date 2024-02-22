@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import Game from "./Game";
+import './GameList.css'
 import { GameContext } from "../context/GameProvider";
 import CategoryMenu from "./CategoryMenu";
 import PlatformMenu from "./PlatformMenu";
-import GameModal from "./GameModal";
 
-function GameList ({onDeleteGame}){
+function GameList ({games,setGames,onDeleteGame}){
 
-    const {getGames,games,setGames} = useContext(GameContext)
+    const {getGames} = useContext(GameContext)
     const [serverError, setServerError] = useState({error: false, message: ""});
 
     const downloadGames = async () => {
@@ -22,47 +22,32 @@ function GameList ({onDeleteGame}){
     }
     
 
-    /*useEffect(() => {
-        downloadGames();
-    },[]);*/
     useEffect(() => {
-        if (!games || games.length === 0) {
-            downloadGames();
-        }
-    }, [games]);
-
-
-    /*return (
-        <div className="Lista">
-            {
-                games && games.length === 0 ? 
-                    <p>No se han encontrado juegos :&lpar;</p>
-                : 
-                    games.map(game => 
-                        <Game game={game} key={game.id} onDeleteGame={onDeleteGame}/>
-                    )
-            }
-        </div>
-    );*/
+        downloadGames();
+    }, []);
 
     const handleCategoryChange = (categoriaId, checked) => {
         
     };
     
-    // Función para filtrar juegos por plataforma
     const handlePlatformChange = (plataformaId, checked) => {
         
     };
       
 
+    
     return (
         <div className="Lista">
-            <CategoryMenu onCategoryChange={handleCategoryChange} />
-            <PlatformMenu onPlatformChange={handlePlatformChange} />
-            {games && games.length > 0 ? (
+            <br></br>
+            <div className="container">
+                <CategoryMenu onCategoryChange={handleCategoryChange} />
+                <PlatformMenu onPlatformChange={handlePlatformChange} />
+            </div>
+            <br></br>
+            {games.length !== 0 ? (
                 games.map(game => (
                 <div key={game.id}>
-                    <Game game={game} onDeleteGame={onDeleteGame} />
+                    <Game game={game} key={game.id} onDeleteGame={onDeleteGame} />
                 </div>
                 ))
             ) : (

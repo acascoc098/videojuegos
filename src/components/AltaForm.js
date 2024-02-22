@@ -1,6 +1,6 @@
 import { useRef,useState } from "react";
 import { postGame } from "../api/GamesApi";
-import "./AltaForm.css;"
+import './AltaForm.css';
 
 const AltaForm = ({plataformas, categorias, onSaveGame}) => {
 
@@ -108,8 +108,11 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
                     })
                 }
                 break;
-            case "category":
-                value = parseInt(value);
+            case "categoria":
+                //value = parseInt(value);
+                break;
+            case "plataforma":
+                //value = parseInt(value);
                 break;
             default:
                 break;
@@ -176,12 +179,24 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
         <div className="form-group">
             <span>Categoría</span>
             <select
-                name="category"
-                value={inputValue.category}
+                name="categoria"
+                value={inputValue.categorias}
                 onChange={handleChange}
             >   
-                {
-                    categories.map((category)=><option key={category.id} value={category.id}>{category.name}</option>)
+                {/*
+                    categorias.map((category)=><option key={category.id} value={category.id}>{category.title}</option>)*/
+                }
+            </select>
+        </div>
+        <div className="form-group">
+            <span>Plataforma</span>
+            <select
+                name="plataforma"
+                value={inputValue.plataformas}
+                onChange={handleChange}
+            >   
+                {/*
+                    plataformas.map((plataform)=><option key={plataform.id} value={plataform.id}>{plataform.title}</option>)*/
                 }
             </select>
         </div>

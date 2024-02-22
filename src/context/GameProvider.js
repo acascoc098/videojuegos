@@ -1,19 +1,20 @@
-import {createContext, useEffect, useState} from "react";
+import {createContext, useEffect} from "react";
 
 export const GameContext = createContext();
 
 const GameProvider = ({children}) => {
-    const [games, setGames] = useState([]);
+    //const [games, setGames] = useState([]);
 
     const getGames = async () => {
         try{
             const response = await fetch("http://localhost:3001/juegos");
             if (response.status !== 200) throw Error;
             const gamesData = await response.json();
-            return setGames(gamesData);
+            return gamesData;
+            //{error: false, data: await response.json()};
             
         }catch (e){
-            console.log("ERROR: no se pueden recuperar los libros")
+            console.log("ERROR: no se pueden recuperar los videojuegos")
         }
         //return await response.json();
     }
@@ -23,7 +24,7 @@ const GameProvider = ({children}) => {
     },[])
 
     return (
-        <GameContext.Provider value={{games,setGames,getGames}}>
+        <GameContext.Provider value={{getGames}}>
             {children}
         </GameContext.Provider>
     );
