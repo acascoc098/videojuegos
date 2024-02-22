@@ -1,5 +1,6 @@
 import './Game.css';
 import React from "react";
+import './GameModal.css';
 
 const GameModal = ({ game, isOpen, onClose}) => {
   
@@ -10,7 +11,7 @@ const GameModal = ({ game, isOpen, onClose}) => {
 
   console.log(isOpen);
   return (
-    <div className='modal'>
+    <div className='modal' onClick={(e) => {e.stopPropagation()}}>
           <div className="modal-content">
             <button className="close" onClick={onClose}>&times;</button>
             <h2>{game.nombre}</h2>
