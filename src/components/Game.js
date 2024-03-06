@@ -29,7 +29,8 @@ const Game = ({game, onDeleteGame}) => {
             <p className="GamePrice">Precio: {game.precio}€</p>
             <p className="GameDescription">Descripción: {descripcion100}...</p>
 
-            <button onClick={delGame}>Borrar juego</button>
+            <button onClick={delGame}>Borrar juego
+            <span class="icon">❌</span></button>
             
             <GameModal game={game} isOpen={open} onClose={closeModal}/>
         </div>

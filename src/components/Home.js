@@ -19,11 +19,11 @@ function Home() {
           <aside className="sidebar">
             <nav>
               <ul>
-                <li><Link to="/nuevo" >Añadir juego</Link>
+                <li><Link to="/nuevo" >Añadir juego </Link>
                 <span class="icon">➕</span> </li>
-                <li><Link to="/juegos">Ver juegos</Link>
+                <li><Link to="/juegos">Ver juegos </Link>
                 <span class="icon">🕹️</span> </li>
-                <li><Link to="/about">About this...</Link>
+                <li><Link to="/about">About </Link>
                 <span class="icon">ℹ️</span> </li>
                 <li><Link to="/" onClick={handleLogout}>Logout </Link>
                     <span class="icon">🔌</span> 
