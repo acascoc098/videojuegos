@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import GameProvider from './context/GameProvider';
+import { GameProvider } from './context/GameProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <GameProvider>
-    <App />
+      <App/>
   </GameProvider>
 );
 

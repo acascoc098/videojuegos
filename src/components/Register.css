@@ -1,0 +1,81 @@
+/* Estilos base */
+.register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según necesites */
+  }
+  
+  .register-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .form-control {
+    margin-bottom: 15px;
+  }
+  
+  .form-control label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control input[type="text"],
+  .form-control input[type="email"],
+  .form-control input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-error {
+    color: #ff0000; /* Color del mensaje de error */
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Color del botón */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-container button:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+  }
+  
+  .link-container {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .link-container .link {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none;
+  }
+  
+  .link-container .link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos específicos del componente Register.css */
+  /* Aquí puedes agregar estilos específicos para este componente si es necesario */
+  

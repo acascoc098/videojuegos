@@ -54,7 +54,7 @@ export const getCategorias = async () => {
 
 export const getPlataformas = async () => {
     try {
-        const response = await fetch("http://localhost:3000/plataformas");
+        const response = await fetch("http://localhost:3001/plataformas");
         return {error: false, data: await response.json()};
     } catch(e) {
         return {error: true, data: "No se ha podido cargar las plataformas"}

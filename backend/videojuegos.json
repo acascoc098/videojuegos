@@ -1,4 +1,17 @@
 {
+  "users": [
+    {
+      "email": "lmolgar288@g.educaand.es",
+      "password": "$2a$10$22hZ/xJYmCWvllcT/lSADeJDMTHuTyJBwe4Mm8kmD4UxzCZexDoyK",
+      "id": 1
+    },
+    {
+      "email": "acascoc098@g.es",
+      "password": "$2a$10$85VoZrzbHAtbgh7CVycCg.7o.VGadHKe2bKjF186ZzaWwUi4i9nhy",
+      "username": "Andrea",
+      "id": 2
+    }
+  ],
   "categorias": [
     {
       "id": 1,
@@ -90,7 +103,7 @@
         8
       ],
       "precio": 59.99,
-      "imagen": "https://en.wikipedia.org/wiki/File:The_Legend_of_Zelda_Breath_of_the_Wild.jpg",
+      "imagen": "https://static.posters.cz/image/750/pinturas-sobre-lienzo-the-legend-of-zelda-breath-of-the-wild-view-i111060.jpg",
       "video": "https://www.youtube.com/watch?v=ofH5ptn5w-A"
     },
     {

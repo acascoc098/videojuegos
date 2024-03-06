@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import GameList from './components/GameList';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import GameDetalle from './components/GameDetalle';
+import PrivateRoute from './components/PrivateRoute';
 import AltaForm from './components/AltaForm';
 import { getCategorias, getPlataformas } from './api/GamesApi';
 import Info from './components/Info';
+import Login from './components/Login';
+import Home from './components/Home';
+import Register from './components/Register';
 
 function App() {
   const [games,setGames] = useState([]);
@@ -44,22 +48,17 @@ function App() {
   console.log(games);
   return (
     <BrowserRouter>
-        <div className="App">
-      
-          <nav>
-            <NavLink to="/home" className={"nav-link"}>LISTADO</NavLink>
-            <NavLink to="/new" className={"nav-link"}>AÑADIR</NavLink>
-            <NavLink to="/about" className={"nav-link"}>ABOUT</NavLink>
-          </nav>
-          <Routes>
-            <Route path='/game/:gameid' element={<GameDetalle/>}/>
-            <Route path='/home' element={<GameList games={games} setGames={setGames} onDeleteGame={onDeleteGame}/>}/>
-            <Route path='/new' element={<AltaForm plataformas={plataformas} categorias={categorias} onSaveGame={onSaveGame}/>}/>
-            <Route path='/about' element={<Info/>}/>
-          </Routes>
-    </div>
+      <Routes>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/registro' element={<Register/>}/>
+        <Route path='' exact element={<PrivateRoute><Home/></PrivateRoute>}>
+          <Route index path='/juegos' element={<PrivateRoute><GameList games={games} setGames={setGames} onDeleteGame={onDeleteGame}/></PrivateRoute>}/>
+          <Route path='/nuevo' element={<PrivateRoute><AltaForm plataformas={plataformas} categorias={categorias} onSaveGame={onSaveGame}/></PrivateRoute>}/>
+          <Route path='/about' element={<PrivateRoute><Info/></PrivateRoute>}/>
+          <Route path='/game/:gameid' element={<PrivateRoute><GameDetalle/></PrivateRoute>}/>
+        </Route>
+      </Routes>
     </BrowserRouter>
-    
   );
 }
 

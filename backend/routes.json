@@ -1,3 +1,4 @@
 {
-    "/home" : "/600/home"
+    "/users*": "/600/users$1",
+    "/juegos*" : "/640/juegos"
 }
