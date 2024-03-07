@@ -1,9 +1,8 @@
-/* Estilos base */
 .register-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura según necesites */
+    height: 100vh;
     background-color: #d7e4da;
   }
   
@@ -41,7 +40,7 @@
   }
   
   .form-error {
-    color: #ff0000; /* Color del mensaje de error */
+    color: #ff0000;
     font-size: 0.9rem;
     margin-top: 5px;
   }
@@ -52,7 +51,7 @@
   
   .button-container button {
     padding: 10px 20px;
-    background-color: #007bff; /* Color del botón */
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -61,7 +60,7 @@
   }
   
   .button-container button:hover {
-    background-color: #0056b3; /* Color del botón al pasar el ratón */
+    background-color: #0056b3;
   }
   
   .link-container {
@@ -70,14 +69,11 @@
   }
   
   .link-container .link {
-    color: #007bff; /* Color del enlace */
+    color: #007bff;
     text-decoration: none;
   }
   
   .link-container .link:hover {
     text-decoration: underline;
   }
-  
-  /* Estilos específicos del componente Register.css */
-  /* Aquí puedes agregar estilos específicos para este componente si es necesario */
   

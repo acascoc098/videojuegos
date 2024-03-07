@@ -1,12 +1,12 @@
 .home {
     display: flex;
     flex-direction: column;
-    height: 100vh; /* Ajusta la altura según necesites */
+    height: 100vh;
   }
   
   header {
-    background-color: #69b356; /* Color de fondo del encabezado */
-    color: #fff; /* Color del texto del encabezado */
+    background-color: #69b356;
+    color: #fff;
     padding: 20px;
   }
   
@@ -16,7 +16,7 @@
   }
   
   .sidebar {
-    background-color: #abd485; /* Color de fondo de la barra lateral */
+    background-color: #abd485;
     padding: 20px;
     min-width: 80px;
     font-weight: bold;
@@ -33,17 +33,17 @@
   }
   
   .sidebar nav ul li a {
-    color: #333; /* Color del texto de los enlaces en la barra lateral */
+    color: #333;
     text-decoration: none;
   }
   
   .sidebar nav ul li a:hover {
-    color: #666; /* Color del texto de los enlaces en la barra lateral al pasar el ratón */
+    color: #666;
   }
   
   .content {
     flex: 1;
     padding: 20px;
-    background-color: #b3e4c2; /* Color de fondo del contenido principal */
+    background-color: #b3e4c2;
   }
   

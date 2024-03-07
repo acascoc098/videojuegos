@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura según necesites */
+    height: 100vh;
     background-color: #d7e4da;
   }
   
@@ -39,7 +39,7 @@
   }
   
   .form-error {
-    color: #ff0000; /* Color del mensaje de error */
+    color: #ff0000;
     font-size: 0.9rem;
     margin-top: 5px;
   }
@@ -49,28 +49,24 @@
   }
   
   .button-container button {
-    padding: 10px 40px; /* Aumenta el padding horizontal para más espacio */
-    background-color: #007bff; /* Color del botón */
+    padding: 10px 40px;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: flex; /* Permite alinear el texto y el icono */
-    align-items: center; /* Alinea verticalmente el texto y el icono */
+    display: flex; 
+    align-items: center; 
   }
   
   .button-container button:hover {
-    background-color: #0056b3; /* Color del botón al pasar el ratón */
+    background-color: #0056b3; 
   }
   
-  /* Estilos para el icono */
   .button-container button .icon {
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-  }
-  
-  /* Puedes ajustar estos estilos según el icono que estés utilizando */
-  
+    margin-right: 5px;
+  }  
   
   .link-container {
     margin-top: 10px;
@@ -78,7 +74,7 @@
   }
   
   .link-container .link {
-    color: #007bff; /* Color del enlace */
+    color: #007bff;
     text-decoration: none;
   }
   

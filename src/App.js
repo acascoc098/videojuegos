@@ -34,7 +34,7 @@ function App() {
   useEffect(() => {
     downloadCategorias();
     downloadPlataformas();
-  },[games])
+  },[])
 
   const onDeleteGame = (delGame) => {
     const newGames = games.filter((game) => delGame !== game);
@@ -45,7 +45,7 @@ function App() {
     setGames([...games,newGame]);
   }
 
-  console.log(games);
+  console.log(categorias);
   return (
     <BrowserRouter>
       <Routes>
@@ -53,7 +53,7 @@ function App() {
         <Route path='/registro' element={<Register/>}/>
         <Route path='' exact element={<PrivateRoute><Home/></PrivateRoute>}>
           <Route index path='/juegos' element={<PrivateRoute><GameList games={games} setGames={setGames} onDeleteGame={onDeleteGame}/></PrivateRoute>}/>
-          <Route path='/nuevo' element={<PrivateRoute><AltaForm plataformas={plataformas} categorias={categorias} onSaveGame={onSaveGame}/></PrivateRoute>}/>
+          <Route path='/nuevo' element={<PrivateRoute><AltaForm plataformass={plataformas} categoriass={categorias} onSaveGame={onSaveGame}/></PrivateRoute>}/>
           <Route path='/about' element={<PrivateRoute><Info/></PrivateRoute>}/>
           <Route path='/juegos/:gameid' element={<PrivateRoute><GameDetalle/></PrivateRoute>}/>
         </Route>

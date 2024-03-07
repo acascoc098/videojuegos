@@ -6,7 +6,7 @@ const GameDetalle = () =>{
     const [game, setGame] = useState({});
     const {gameid} = useParams();
 
-    //No sé por qué me da error con el login
+    //No sé por qué me da error con el join
     /*const plataformas = game.plataformas.join(' - ');
     const categorias = game.categorias.join(' - ');*/
 

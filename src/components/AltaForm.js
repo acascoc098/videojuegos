@@ -2,7 +2,11 @@ import { useRef,useState } from "react";
 import { postGame } from "../api/GamesApi";
 import './AltaForm.css';
 
-const AltaForm = ({plataformas, categorias, onSaveGame}) => {
+const AltaForm = ({plataformass, categoriass, onSaveGame}) => {
+
+    const [selectedPlataforma, setSelectedPlataforma] = useState('');
+    const [selectedCategoria, setSelectedCategoria] = useState('');
+    //console.log(categoriass)
 
     const [inputValue, setInputValue] = useState({
         nombre: "",
@@ -73,25 +77,25 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
                 if (value.length === 0) {
                     setErrors({
                         ...errors,
-                        title: {error: true, message: "El título del libro es obligatorio."}
+                        nombre: {error: true, message: "El nombre del juego es obligatorio."}
                     })
                 } else {
                     setErrors({
                         ...errors,
-                        title: {error: false, message: ""}
+                        nombre: {error: false, message: ""}
                     })
                 }
                 break;
             case "video":
-                if (value.length > 0 && !isNaN(value)) {
+                if (value.length === 0) {
                     setErrors({
                         ...errors,
-                        author: {error: true, message: "El video es obligatorio"}
+                        video: {error: true, message: "El video es obligatorio"}
                     })
                 } else {
                     setErrors({
                         ...errors,
-                        author: {error: false, message: ""}
+                        video: {error: false, message: ""}
                     })
                 }
                 break;
@@ -99,20 +103,20 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
                 if (value.length === 0) {
                     setErrors({
                         ...errors,
-                        description: {error: true, message: "El la fecha de lanzamiento es obligatorio."}
+                        fecha_lanza: {error: true, message: "El la fecha de lanzamiento es obligatorio."}
                     })
                 } else {
                     setErrors({
                         ...errors,
-                        description: {error: false, message: ""}
+                        fecha_lanza: {error: false, message: ""}
                     })
                 }
                 break;
-            case "categoria":
-                //value = parseInt(value);
-                break;
             case "plataforma":
-                //value = parseInt(value);
+                setSelectedPlataforma(value);
+                break;
+            case "categoria":
+                setSelectedCategoria(value);
                 break;
             default:
                 break;
@@ -157,7 +161,7 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
         </div>
         <div className="form-group">
             <span>Fecha de lanzamiento: </span>
-            <input  type="text"
+            <input  type="date"
                     name="fecha_lanza"
                     value={inputValue.fecha_lanza}
                     onChange={handleChange}
@@ -171,34 +175,63 @@ const AltaForm = ({plataformas, categorias, onSaveGame}) => {
         <div className="form-group">
             <span>Compañia: </span>
             <input  type="text"
-                    name="cover"
+                    name="compania"
                     value={inputValue.compania}
                     onChange={handleChange}
             />
         </div>
         <div className="form-group">
+            <span>Precio: </span>
+            <input  type="number"
+                    name="precio"
+                    value={inputValue.precio}
+                    onChange={handleChange}/>
+        </div>
+        <div className="form-group">
             <span>Categoría</span>
             <select
                 name="categoria"
-                value={inputValue.categorias}
-                onChange={handleChange}
-            >   
-                {/*
-                    categorias.map((category)=><option key={category.id} value={category.id}>{category.title}</option>)*/
-                }
+                value={selectedCategoria}
+                onChange={(e) => handleChange(e, "categoria")}
+            >
+                {categoriass?.map((category) => (
+                    <option key={category.id} value={category.id}>{category.title}</option>
+                ))}
             </select>
         </div>
         <div className="form-group">
             <span>Plataforma</span>
             <select
                 name="plataforma"
-                value={inputValue.plataformas}
-                onChange={handleChange}
-            >   
-                {/*
-                    plataformas.map((plataform)=><option key={plataform.id} value={plataform.id}>{plataform.title}</option>)*/
-                }
+                value={selectedPlataforma}
+                onChange={(e) => handleChange(e, "plataforma")}
+            >
+                {plataformass?.map((plataform) => (
+                    <option key={plataform.id} value={plataform.id}>{plataform.title}</option>
+                ))}
             </select>
+        </div>
+        
+            <div className="form-group">
+            <span>Video: </span>
+            <input  type="text"
+                    name="video"
+                    value={inputValue.video}
+                    onChange={handleChange}
+            />
+            {
+            errors.video.error ? 
+                <div className="error">{errors.video.message}</div>
+                : null
+            }
+        </div>
+            <div className="form-group">
+            <span>Imagen: </span>
+            <input  type="text"
+                    name="imagen"
+                    value={inputValue.imagen}
+                    onChange={handleChange}
+            />
         </div>
         <div className="form-group">
             { serverError.error ? serverError.message: "" }
