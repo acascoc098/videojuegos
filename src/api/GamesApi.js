@@ -1,6 +1,6 @@
-export const getGame = async (gameId) => {
+export const getGame = async (gameid) => {
     try {
-        const response = await fetch("http://localhost:3001/juegos/" + gameId);
+        const response = await fetch(`http://localhost:3001/juegos/${gameid}`);
         if (response.status === 200) {
             return {error: false, data: await response.json()};
         } else {

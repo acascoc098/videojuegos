@@ -55,7 +55,7 @@ function App() {
           <Route index path='/juegos' element={<PrivateRoute><GameList games={games} setGames={setGames} onDeleteGame={onDeleteGame}/></PrivateRoute>}/>
           <Route path='/nuevo' element={<PrivateRoute><AltaForm plataformas={plataformas} categorias={categorias} onSaveGame={onSaveGame}/></PrivateRoute>}/>
           <Route path='/about' element={<PrivateRoute><Info/></PrivateRoute>}/>
-          <Route path='/game/:gameid' element={<PrivateRoute><GameDetalle/></PrivateRoute>}/>
+          <Route path='/juegos/:gameid' element={<PrivateRoute><GameDetalle/></PrivateRoute>}/>
         </Route>
       </Routes>
     </BrowserRouter>
